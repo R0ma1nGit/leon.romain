@@ -1,0 +1,325 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "reflection": "Reflection",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "typing": "I build, configure and secure networks.",
+    "role": "Networking & Telecommunications Student | Network Specialization",
+    "learnMore": "Learn more",
+    "downloadCV": "Download my resume"
+  },
+  "about": {
+    "title": "About",
+    "objective": "Goal",
+    "objectiveText": "Become a network & system technician or administrator",
+    "objectiveDesc": "Passionate about IT infrastructure and network monitoring",
+    "pursuitLabel": "📚 Further studies planned:",
+    "pursuitText": "Master's in System & Network Administration",
+    "pursuitSchools": "(ENSMAG / Polytech / INSA)",
+    "terminalFile": "about.txt",
+    "terminalCmd": "cat about.txt",
+    "aboutText1": "Passionate about computer networking, I am particularly interested in designing and configuring complex network infrastructures (MPLS, OSPF, EIGRP), as well as monitoring and maintaining IT infrastructures.",
+    "aboutText2": "I am also developing system administration skills through projects and hands-on practice. I am actively seeking opportunities to deepen my network and system administration skills in a stimulating technical environment.",
+    "education": "Education",
+    "edu1Date": "2025 - 2026",
+    "edu1Title": "Bachelor's in Networking & Telecommunications",
+    "edu1School": "IUT de Saint-Pierre",
+    "edu2Date": "2023 - 2025",
+    "edu2Title": "Associate Degree in Networking & Telecommunications",
+    "edu2School": "IUT de Saint-Pierre",
+    "edu3Date": "2023",
+    "edu3Title": "Bac STI2D - Digital & Information Systems",
+    "edu3School": "Digital & Information Systems"
+  },
+  "reflection": {
+    "title": "My Reflection",
+    "portfolioTitle": "What my portfolio says about me",
+    "portfolioText1": "My portfolio reflects my <1>passion for network infrastructure</1> and my commitment to mastering the entire technical chain, from design to monitoring.",
+    "portfolioText2": "It shows that I am <1>methodical</1>, <2>curious</2>, and capable of leading technical projects from start to finish. I take the time to document my achievements and explain my reasoning.",
+    "portfolioText3": "As a future Networking & Telecommunications professional, I strive to develop a holistic vision: architecture, security, automation, and monitoring form a coherent whole in my projects.",
+    "progressionTitle": "My Progression Year 1 → Year 3",
+    "but1Title": "Year 1 — Foundations",
+    "but1Items": [
+      "Networking basics (OSI model, IP, subnetting)",
+      "First steps with Packet Tracer and GNS3",
+      "Basic monitoring (Cacti/SNMP)",
+      "Setting up DHCP, DNS and HTTP servers (Apache/Nginx)."
+    ],
+    "but2Title": "Year 2 — Technical deepening",
+    "but2Items": [
+      "Perimeter security (Stormshield, iptables)",
+      "Advanced architectures (MPLS L3VPN, BGP)",
+      "First scripts to automate simple system tasks."
+    ],
+    "but3Title": "Year 3 — Skill development",
+    "but3Items": [
+      "Automation with Ansible and Docker",
+      "Complete monitoring (TIG Stack, IoT)",
+      "Container management with Docker Compose"
+    ],
+    "improvementTitle": "Areas for Improvement",
+    "improvement1Title": "Cloud & Edge Infrastructure",
+    "improvement1Text": "Deepen Cloud infrastructure management (AWS, Azure) and Edge services to optimize multimedia content delivery and application latency.",
+    "improvement1Tag1": "Cloud Networking",
+    "improvement1Tag2": "Edge Computing",
+    "improvement2Title": "Scripting & Automation",
+    "improvement2Text": "Develop my Python skills for Network Automation and deepen Ansible with complex roles and CI/CD.",
+    "improvement2Tag1": "Python",
+    "improvement2Tag2": "Advanced Ansible"
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": [
+      {
+        "title": "Networking",
+        "skills": ["MPLS", "OSPF", "EIGRP", "RIP", "SD-WAN", "Routing & Switching"]
+      },
+      {
+        "title": "Monitoring",
+        "skills": ["Cacti", "Monitoring", "SNMP", "Incident Management", "Grafana"]
+      },
+      {
+        "title": "Services",
+        "skills": ["DNS (BIND9)", "DHCP", "Active Directory", "Web Servers"]
+      },
+      {
+        "title": "Systems",
+        "skills": ["Linux", "Windows Server", "System Administration", "Virtualization"]
+      },
+      {
+        "title": "Virtualization",
+        "skills": ["VMware", "VirtualBox", "Docker", "Virtual Environments"]
+      },
+      {
+        "title": "Tools",
+        "skills": ["Cisco IOS", "Wireshark", "Packet Tracer", "Bash Scripts"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Technical Projects",
+    "allProjects": "All Projects",
+    "network": "Network",
+    "supervision": "Monitoring",
+    "server": "Server",
+    "personalProject": "Personal Project",
+    "clickDetails": "Click to view details",
+    "context": "Context",
+    "objective": "Objective",
+    "realisation": "Implementation",
+    "results": "Results",
+    "networkTopology": "Network Topology",
+    "technologies": "Technologies & Tools",
+    "skillsDeveloped": "Skills Developed",
+    "pdfReport": "PDF Report",
+    "pdfUnavailable": "PDF Unavailable",
+    "secureDoc": "Secure Document",
+    "secureDocDesc": "Read-only mode enabled. Download disabled.",
+    "docUnavailable": "Document unavailable",
+    "docUnavailableDesc": "The report is not yet available for this project.",
+    "report": "Report",
+    "readOnly": "READ ONLY",
+    "readOnlyDoc": "Read-only document • Download disabled",
+    "confidential": "CONFIDENTIAL",
+    "confidentialWatermark": "CONFIDENTIAL • READ ONLY",
+    "noPdf": "No PDF report has been attached to this project yet.",
+    "inProgress": "IN PROGRESS",
+    "completed": "COMPLETED",
+    "list": [
+      {
+        "title": "Network Monitoring with Cacti & SNMP",
+        "description": "Deployment of a monitoring architecture on a segmented virtualized network (LAN/NAT).",
+        "skills": ["Cacti", "SNMP", "Linux (Debian/Ubuntu)", "Routing/NAT", "VirtualBox"],
+        "contexte": "As part of an academic project (SAE), the goal was to simulate a partitioned corporate network for surveillance purposes, without direct client access to the Internet.",
+        "objectif": "Implement a complete monitoring chain (Manager/Agent) via SNMP protocol to monitor the availability and resources of a heterogeneous fleet.",
+        "realisation": [
+          "Design of a virtualized topology (3 VMs): Creation of an isolated LAN behind an Ubuntu gateway configured with NAT (iptables, ip_forward)",
+          "Installation and configuration of the LAMP stack (Linux, Apache, MariaDB, PHP) required for Cacti operation",
+          "Deployment of SNMP agents (snmpd) on Debian client machines and community configuration",
+          "Integration of hosts into the Cacti console and creation of performance graphs (Interface traffic, CPU load, Ping)",
+          "Outage tests: Validation of incident detection (Hosts transitioning to 'Down' state in the console)"
+        ],
+        "resultats": "Functional infrastructure enabling real-time visualization of fleet health (UP/DOWN) and resource usage history through RRDtool graphs.",
+        "technologies": ["Cacti 1.2", "SNMP", "VirtualBox", "Debian/Ubuntu", "Apache/MariaDB", "IPTables"]
+      },
+      {
+        "title": "Multi-Site Monitoring TIG (Telegraf-InfluxDB-Grafana)",
+        "description": "Real-time monitoring of a distributed server fleet (Paris/NY/London) with mapping and alerting.",
+        "skills": ["Docker", "Grafana", "InfluxDB", "Debian 12", "Troubleshooting"],
+        "contexte": "Need to monitor in real-time the system health (CPU) and network quality (Latency) of Linux servers distributed geographically (Paris, New York, London) on a single interface.",
+        "objectif": "Design and deploy a complete containerized TIG monitoring stack (Telegraf, InfluxDB, Grafana) to visualize metrics and asset geolocation.",
+        "realisation": [
+          "Distributed Architecture: Master Server (Docker/InfluxDB/Grafana) and Telegraf Agents (Nodes) on 3 Debian 12 VMs",
+          "Advanced Visualization: Creation of a 'Weather' Dashboard with Worldmap (GPS tag injection) and CPU Gauges (visual alerting > 80%)",
+          "Network Metrology: Monitoring connectivity and inter-site latency via active Ping probes",
+          "System Troubleshooting: Bypassing GPG restrictions on Debian 12 (Bookworm) and fixing execution permissions for the Ping plugin",
+          "Data Engineering: Using Grafana Transformations to convert GPS coordinates (String) to numbers on the fly"
+        ],
+        "resultats": "Operational monitoring infrastructure providing an instant geographic view. Validation of skills across the complete data chain (Collection > Storage > Visualization) and troubleshooting in containerized environments.",
+        "technologies": ["Docker & Compose", "Grafana", "InfluxDB", "Telegraf", "Debian 12 Bookworm", "TOML"]
+      },
+      {
+        "title": "End-to-End IoT & Monitoring Chain",
+        "description": "Temperature/Humidity data acquisition (MQTT, InfluxDB) and threshold alert setup (Grafana).",
+        "skills": ["Docker", "Python", "MQTT", "Grafana", "InfluxDB"],
+        "contexte": "The goal was to design an autonomous environmental telemetry system capable of not only collecting data (Temperature/Humidity) but also being remotely controlled.",
+        "objectif": "Implement a complete IoT architecture (Edge to Cloud) using standard protocols (MQTT) and a containerized visualization stack.",
+        "realisation": [
+          "Microcontroller programming on Pycom (MicroPython): Reading Pysense sensors and managing WiFi/MQTT connectivity",
+          "Deployment of a Docker infrastructure on Debian 12 hosting: InfluxDB (Database), Grafana (Visualization) and Mosquitto (Broker)",
+          "Development of a Python 'Bridge' script to intercept MQTT topics and inject metrics into InfluxDB",
+          "Setup of a Node-RED control Dashboard allowing real-time commands (Pause/Resume) to sensors",
+          "Test recipes: Configuration of alert thresholds (Alerting) to detect critical temperature exceedances"
+        ],
+        "resultats": "Operational system enabling real-time visualization of environmental curves and automatic alert triggering.",
+        "technologies": ["Pycom (MicroPython)", "MQTT (Mosquitto)", "Python Scripting", "Docker Compose", "InfluxDB", "Grafana"]
+      },
+      {
+        "title": "Server Fleet Automation (Ansible)",
+        "description": "Automated management of a Linux server fleet: centralized configuration, installation and updates.",
+        "skills": ["Ansible", "Automation", "Linux Debian", "SSH", "YAML"],
+        "contexte": "Managing servers one by one is repetitive and error-prone. I needed a method to administer multiple machines simultaneously without connecting to each one individually.",
+        "objectif": "Set up a 'control center' (Management Node) capable of sending configurations and updates remotely to an entire fleet of machines, automatically and securely.",
+        "realisation": [
+          "Creation of a virtual lab with 3 Debian servers connected on a private network to simulate a company environment.",
+          "Setup of a secure 'remote control': SSH key configuration to allow the master server to manage others without passwords.",
+          "Creation of simple scripts (Playbooks) to automate common tasks: installing software (Nmap, NTP), running system updates (apt update) and copying files.",
+          "Using inventory to precisely target which machines should receive which configuration."
+        ],
+        "resultats": "I can now configure or update all my servers by running a single command. What used to take 1 hour manually is now done in 2 minutes, with no risk of oversight.",
+        "technologies": ["Ansible", "Linux Debian", "SSH", "Playbooks YAML", "Bash"]
+      },
+      {
+        "title": "Linux Router & Secure Architecture (DMZ/VLAN)",
+        "description": "Turning a Debian server into a router/firewall: Segmentation, NAT/PAT and 802.1Q VLANs.",
+        "skills": ["Linux Networking", "iptables", "VLAN 802.1Q", "DMZ", "Troubleshooting"],
+        "contexte": "In environments where dedicated equipment (Cisco/Fortinet) is unavailable, it is essential to know how to deploy advanced network functions directly via the Linux operating system.",
+        "objectif": "Design a robust software security gateway ensuring routing, filtering and segmentation between a private LAN, a public DMZ and Internet access.",
+        "realisation": [
+          "Configuration of routing (IP Forwarding) and static addressing on Debian 12",
+          "Setup of perimeter security: iptables rules for PAT (Outbound) and DNAT (Web port redirection to DMZ)",
+          "Logical segmentation: Creation of virtual interfaces for VLAN trunking (802.1Q) to clients",
+          "Service deployment: Apache Web Server in isolated zone (DMZ) accessible from outside",
+          "Technical validation: Frame analysis with Tcpdump to verify VLAN packet tagging"
+        ],
+        "resultats": "Functional and secure infrastructure. Validation of zone isolation (LAN vs DMZ) and web service accessibility via port redirection.",
+        "technologies": ["Debian Linux", "iptables (Netfilter)", "Apache2", "Tcpdump", "VLAN", "VirtualBox"]
+      },
+      {
+        "title": "MPLS Architecture & Virtualization",
+        "description": "Design of a complete L3VPN service provider network: Client isolation (VRF), Routing (OSPF/BGP) and Protocol analysis.",
+        "skills": ["Cisco IOS", "GNS3", "MPLS", "Wireshark"],
+        "contexte": "Simulation of an ISP backbone network that must interconnect the remote sites of a client ('Carrefour') while ensuring complete traffic isolation from other clients.",
+        "objectif": "Implement a complete MPLS L3VPN architecture: Internal routing (OSPF), Label switching (LDP), Isolation (VRF) and VPNv4 route propagation (MP-BGP).",
+        "realisation": [
+          "Configuration of the Backbone IGP (OSPF Area 0) and activation of LDP protocol on core interfaces",
+          "Creation of virtual routing instances (VRF) on PE routers to isolate the 'Carrefour' client",
+          "Configuration of MP-BGP sessions for VPNv4 route exchange between border routers (PE)",
+          "Setup of bidirectional redistribution between client routing (OSPF) and operator BGP",
+          "Wireshark Analysis: Dissection of the MPLS label stack (Transport Label vs VPN Label) and BGP Update messages"
+        ],
+        "resultats": "Operational client site interconnection (Ping validated). Mastery of MPLS forwarding mechanisms (Swap/Pop) and BGP VPNv4 signaling.",
+        "technologies": ["Cisco IOS", "GNS3", "MPLS L3VPN", "MP-BGP", "Wireshark"]
+      },
+      {
+        "title": "High Availability SQL Cluster (MariaDB)",
+        "description": "Implementation of a distributed database architecture with bidirectional replication and security.",
+        "skills": ["MariaDB/MySQL", "SQL Replication", "Triggers", "Security (RBAC)", "Linux"],
+        "contexte": "To ensure service continuity of a critical application (e-commerce type), an isolated database represents a single point of failure (SPOF). Data redundancy was necessary.",
+        "objectif": "Design a complex relational database (Stored procedures, Triggers) and deploy Master-Slave replication (then bidirectional) to ensure high availability.",
+        "realisation": [
+          "Modeling and creation of the 'Amazon' database: Relational tables (Foreign keys), test data insertion",
+          "SQL Automation: Development of stored procedures (simplified client addition) and Triggers (critical stock alert) for data integrity",
+          "Security and RBAC: Creation of least-privilege users (Manager vs Consultant) and network access restriction",
+          "Replication setup: Configuration of 'my.cnf' files (server-id, log-bin), replication user management and initial synchronization (SQL Dump)",
+          "Troubleshooting: Resolving inter-node connectivity issues (UFW Firewall configuration port 3306) and replication thread diagnostics (Slave_IO/SQL_Running)"
+        ],
+        "resultats": "Operational database cluster. Bidirectional replication ensures that any write on the Master is instantly propagated to the Slave, guaranteeing data resilience.",
+        "technologies": ["MariaDB", "SQL", "Bash", "UFW (Firewall)", "Replication Binlog"]
+      },
+      {
+        "title": "Web Solution & Automation: Si'La Fée Zen",
+        "description": "E-wellness booking platform with client authentication, relational database and CRM automation.",
+        "skills": ["Netlify", "Supabase", "Make", "React", "Marketing Automation"],
+        "contexte": "A wellness practitioner wanted to professionalize her business: moving from manual appointment scheduling to a digital ecosystem managing her clients and schedule.",
+        "objectif": "Create an automated digital ecosystem: online booking, member verification by phone and calendar synchronization without human intervention.",
+        "realisation": [
+          "Deployment and Hosting: Going live via Netlify with CI/CD pipeline (GitHub) for high availability and automatic updates.",
+          "Data Architecture (Supabase): Design of a relational SQL schema to manage bookings and the 'Private Club' member registry.",
+          "Identity Verification: Phone number authentication to validate club access and limit spam.",
+          "CRM Automation (Make): Workflow creation for instant transactional emails and automatic calendar sync when appointments are booked.",
+          "Admin Dashboard (Back-Office): Development of a private management interface allowing the client to moderate club memberships and manage her schedule in real-time.",
+          "User Experience (UX): Responsive React interface allowing bookings from a smartphone in under 3 clicks."
+        ],
+        "resultats": "A turnkey solution allowing the client to focus solely on her massages, with the site handling all administrative and logistical tasks.",
+        "technologies": ["Netlify", "Supabase Auth", "PostgreSQL", "Make", "React JS", "Node-mailer via Make"]
+      },
+      {
+        "title": "Active Directory Administration (Windows Server 2016)",
+        "description": "Deployment of a domain infrastructure: Domain Controller, User management and Workstation joining.",
+        "skills": ["Active Directory DS", "Windows Server", "DNS", "IAM Management", "Virtualization"],
+        "contexte": "To centralize IT fleet administration (simulated for a university institute), it was necessary to transition from Workgroup management (peer-to-peer) to a centralized Domain architecture.",
+        "objectif": "Install and configure a Domain Controller (DC) on Windows Server 2016, structure the directory and validate client authentication.",
+        "realisation": [
+          "Installation of Windows Server 2016 OS and network configuration (static IP, local DNS)",
+          "Server promotion to Domain Controller and creation of the 'rtdomtest.com' forest",
+          "Directory architecture: Creation of Organizational Units (OU) to reflect the institute's structure",
+          "Identity Management (IAM): Creation of users and security groups (Management, Teachers, Students)",
+          "Client Integration: DNS configuration of workstations and domain joining to enable unified logon"
+        ],
+        "resultats": "Operational domain with a structured user base. Client workstations can authenticate on the network via the Domain Controller.",
+        "technologies": ["Windows Server 2016", "AD DS", "DNS", "VirtualBox", "VM Cloning"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "jobTitle": "IT Support Technician",
+    "company": "AFI",
+    "duration": "Internship (2 months) - 2023",
+    "location": "Réunion Island",
+    "mainMissions": "Main missions:",
+    "tasks": [
+      "Preparation and configuration of workstations",
+      "EBP data backup and restoration",
+      "HDD to SSD disk cloning for optimization",
+      "Remote IT support",
+      "Installation and configuration of business software",
+      "Preventive and corrective maintenance of IT equipment"
+    ],
+    "skillsDeveloped": "Skills developed:",
+    "skillsList": ["PC Maintenance", "Data Backup", "Technical Support", "Disk Cloning", "Windows", "Business Software"]
+  },
+  "contact": {
+    "title": "Contact",
+    "terminalInit": "> Initializing secure connection...",
+    "successTitle": "> Message sent successfully!",
+    "successDesc": "Acknowledgement received from server.",
+    "nameLabel": "Name:",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email:",
+    "emailPlaceholder": "your@email.com",
+    "phoneLabel": "Phone:",
+    "phonePlaceholder": "06 92 XX XX XX",
+    "messageLabel": "Message:",
+    "messagePlaceholder": "Your message...",
+    "sending": "Sending...",
+    "send": "Send message",
+    "directContact": "Or contact me directly:",
+    "toastSuccess": "Message sent!",
+    "toastSuccessDesc": "I will get back to you as soon as possible.",
+    "toastError": "Error",
+    "toastErrorDesc": "An error occurred. Please check your EmailJS keys."
+  },
+  "footer": {
+    "copyright": "© {{year}} Portfolio RT",
+    "madeWith": "Made with passion for networking",
+    "uptime": "up and running, ready to connect"
+  }
+}

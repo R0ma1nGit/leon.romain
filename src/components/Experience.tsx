@@ -1,14 +1,10 @@
 import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Experience = () => {
-  const tasks = [
-    "Préparation et configuration de postes de travail",
-    "Sauvegardes et restauration de données EBP",
-    "Clonage de disques HDD vers SSD pour optimisation",
-    "Support informatique à distance",
-    "Installation et configuration de logiciels métiers",
-    "Maintenance préventive et curative du parc informatique",
-  ];
+  const { t } = useTranslation();
+  const tasks = t("experience.tasks", { returnObjects: true }) as string[];
+  const skillsList = t("experience.skillsList", { returnObjects: true }) as string[];
 
   return (
     <section id="experiences" className="py-20 bg-muted/30 relative overflow-hidden">
@@ -16,7 +12,7 @@ const Experience = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold font-mono mb-4 text-center">
-          <span className="text-primary text-glow">{">"}</span> Expériences
+          <span className="text-primary text-glow">{">"}</span> {t("experience.title")}
         </h2>
         <div className="h-1 w-24 bg-primary mx-auto mb-12 rounded-full border-glow"></div>
 
@@ -30,17 +26,17 @@ const Experience = () => {
                   </div>
                   <div>
                     <h3 className="font-mono text-2xl font-semibold mb-2">
-                      Technicien Support Informatique
+                      {t("experience.jobTitle")}
                     </h3>
-                    <p className="text-lg text-primary mb-2">AFI</p>
+                    <p className="text-lg text-primary mb-2">{t("experience.company")}</p>
                     <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
                         <Calendar size={16} />
-                        <span>Stage (2mois) - 2023</span>
+                        <span>{t("experience.duration")}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <MapPin size={16} />
-                        <span>La Réunion</span>
+                        <span>{t("experience.location")}</span>
                       </div>
                     </div>
                   </div>
@@ -50,7 +46,7 @@ const Experience = () => {
 
             <div className="p-6">
               <h4 className="font-mono text-lg font-semibold mb-4 text-secondary">
-                Missions principales :
+                {t("experience.mainMissions")}
               </h4>
               <div className="space-y-3">
                 {tasks.map((task, index) => (
@@ -65,17 +61,10 @@ const Experience = () => {
 
               <div className="mt-6 pt-6 border-t border-border">
                 <h4 className="font-mono text-lg font-semibold mb-3 text-secondary">
-                  Compétences développées :
+                  {t("experience.skillsDeveloped")}
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    "Maintenance PC",
-                    "Sauvegarde de données",
-                    "Support technique",
-                    "Clonage de disques",
-                    "Windows",
-                    "Logiciels métiers",
-                  ].map((skill, index) => (
+                  {skillsList.map((skill, index) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-secondary/10 border border-secondary/30 rounded-full text-sm font-mono"
@@ -87,7 +76,6 @@ const Experience = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -95,4 +83,3 @@ const Experience = () => {
 };
 
 export default Experience;
-

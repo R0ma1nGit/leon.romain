@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,13 +25,13 @@ const Navigation = () => {
   };
 
   const navLinks = [
-    { id: "accueil", label: "Accueil" },
-    { id: "apropos", label: "À propos" },
-    { id: "reflexion", label: "Réflexion" },
-    { id: "competences", label: "Compétences" },
-    { id: "projets", label: "Projets" },
-    { id: "experiences", label: "Expériences" },
-    { id: "contact", label: "Contact" },
+    { id: "accueil", label: t("nav.home") },
+    { id: "apropos", label: t("nav.about") },
+    { id: "reflexion", label: t("nav.reflection") },
+    { id: "competences", label: t("nav.skills") },
+    { id: "projets", label: t("nav.projects") },
+    { id: "experiences", label: t("nav.experience") },
+    { id: "contact", label: t("nav.contact") },
   ];
 
   return (
@@ -60,15 +63,19 @@ const Navigation = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-primary"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-3 md:hidden">
+            <LanguageSwitcher />
+            <button
+              className="text-primary"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

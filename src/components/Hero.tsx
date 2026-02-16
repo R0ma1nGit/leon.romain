@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, Download, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Je construis, configure et sécurise des réseaux.";
+  const fullText = t("hero.typing");
 
   useEffect(() => {
+    setDisplayText("");
     let currentIndex = 0;
     const intervalId = setInterval(() => {
       if (currentIndex <= fullText.length) {
@@ -17,7 +20,7 @@ const Hero = () => {
     }, 50);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [fullText, i18n.language]);
 
   const scrollToAbout = () => {
     const element = document.getElementById("apropos");
@@ -63,7 +66,7 @@ const Hero = () => {
           </div>
 
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Étudiant en BUT Réseaux & Télécommunications | Spécialisation Réseau
+            {t("hero.role")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -72,33 +75,24 @@ const Hero = () => {
               className="px-8 py-3 bg-primary text-primary-foreground font-mono font-semibold rounded-lg hover:scale-105 transition-transform border-glow group"
             >
               <span className="flex items-center justify-center gap-2">
-                En savoir plus
+                {t("hero.learnMore")}
                 <ChevronDown size={18} className="group-hover:translate-y-1 transition-transform" />
               </span>
             </button>
             <a
-  href="/CV_Romain_LEON_Portfolio.pdf"
-  download="LEON_Romain-Curriculum_Vitae.pdf"
-  className="px-8 py-3 bg-secondary text-secondary-foreground font-mono font-semibold rounded-lg hover:scale-105 transition-transform border-glow group"
->
-  <span className="flex items-center justify-center gap-2">
-    <Download size={18} className="group-hover:translate-y-1 transition-transform" />
-    Télécharger mon CV
-  </span>
-</a>
+              href="/CV_Romain_LEON_Portfolio.pdf"
+              download="LEON_Romain-Curriculum_Vitae.pdf"
+              className="px-8 py-3 bg-secondary text-secondary-foreground font-mono font-semibold rounded-lg hover:scale-105 transition-transform border-glow group"
+            >
+              <span className="flex items-center justify-center gap-2">
+                <Download size={18} className="group-hover:translate-y-1 transition-transform" />
+                {t("hero.downloadCV")}
+              </span>
+            </a>
           </div>
 
           {/* Social Links */}
           <div className="flex gap-4 justify-center items-center">
-            {/* <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-terminal-bg border border-border rounded-full hover:border-primary hover:text-primary transition-all hover:scale-110 border-glow"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a> */}
             <a
               href="https://linkedin.com"
               target="_blank"
@@ -118,12 +112,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };
 
 export default Hero;
-
-
-

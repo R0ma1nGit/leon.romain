@@ -2,9 +2,11 @@ import { useState, useRef } from "react";
 import { Mail, Send, CheckCircle, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);
 
   const [formData, setFormData] = useState({
@@ -17,20 +19,11 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  // 👇 NOUVELLE FONCTION : Gestion intelligente du téléphone
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
-
-    // 1. On supprime tout ce qui n'est pas un chiffre (lettres, symboles...)
     const cleanValue = value.replace(/\D/g, "");
-
-    // 2. On limite à 10 chiffres maximum
     const truncatedValue = cleanValue.slice(0, 10);
-
-    // 3. On ajoute un espace tous les 2 chiffres
-    // La regex /(\d{2})(?=\d)/g signifie : "Prends 2 chiffres s'ils sont suivis par un autre chiffre"
     const formattedValue = truncatedValue.replace(/(\d{2})(?=\d)/g, "$1 ");
-
     setFormData({ ...formData, phone: formattedValue });
   };
 
@@ -38,13 +31,9 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // ============================================================
-    // VOS CLES EMAILJS
-    // ============================================================
     const SERVICE_ID = "service_ruo4b1u";
     const TEMPLATE_ID = "template_winqrwj";
     const PUBLIC_KEY = "w4GaojgBlqmRsB3gl"; 
-    // ============================================================
 
     if (formRef.current) {
       emailjs
@@ -54,8 +43,8 @@ const Contact = () => {
             setIsSubmitted(true);
             setIsLoading(false);
             toast({
-              title: "Message envoyé !",
-              description: "Je vous répondrai dans les plus brefs délais.",
+              title: t("contact.toastSuccess"),
+              description: t("contact.toastSuccessDesc"),
             });
 
             setTimeout(() => {
@@ -68,8 +57,8 @@ const Contact = () => {
             console.error(error);
             toast({
               variant: "destructive",
-              title: "Erreur",
-              description: "Une erreur est survenue. Vérifiez vos clés EmailJS.",
+              title: t("contact.toastError"),
+              description: t("contact.toastErrorDesc"),
             });
           }
         );
@@ -82,7 +71,7 @@ const Contact = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold font-mono mb-4 text-center">
-          <span className="text-primary text-glow">{">"}</span> Contact
+          <span className="text-primary text-glow">{">"}</span> {t("contact.title")}
         </h2>
         <div className="h-1 w-24 bg-primary mx-auto mb-12 rounded-full border-glow"></div>
 
@@ -105,7 +94,7 @@ const Contact = () => {
                   <span className="text-primary">admin@contact:~$</span> ./send_message.sh
                 </p>
                 <p className="font-mono text-sm text-secondary mb-4">
-                  {">"} Initializing secure connection...
+                  {t("contact.terminalInit")}
                 </p>
               </div>
 
@@ -113,82 +102,75 @@ const Contact = () => {
                 <div className="py-12 text-center">
                   <CheckCircle className="w-16 h-16 text-secondary mx-auto mb-4 animate-pulse-glow" />
                   <p className="font-mono text-lg text-secondary mb-2">
-                    {">"} Message sent successfully!
+                    {t("contact.successTitle")}
                   </p>
                   <p className="font-mono text-sm text-muted-foreground">
-                    Acknowledgement received from server.
+                    {t("contact.successDesc")}
                   </p>
                 </div>
               ) : (
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="font-mono text-sm text-muted-foreground block mb-2">
-                      <span className="text-primary">{">"}</span> Nom:
+                      <span className="text-primary">{">"}</span> {t("contact.nameLabel")}
                     </label>
                     <input
                       type="text"
                       name="user_name" 
                       required
                       value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full bg-muted border border-border rounded px-4 py-2 font-mono text-sm focus:border-primary focus:outline-none transition-colors"
-                      placeholder="Votre nom"
+                      placeholder={t("contact.namePlaceholder")}
                       disabled={isLoading}
                     />
                   </div>
 
                   <div>
                     <label className="font-mono text-sm text-muted-foreground block mb-2">
-                      <span className="text-primary">{">"}</span> Email:
+                      <span className="text-primary">{">"}</span> {t("contact.emailLabel")}
                     </label>
                     <input
                       type="email"
                       name="user_email"
                       required
                       value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full bg-muted border border-border rounded px-4 py-2 font-mono text-sm focus:border-primary focus:outline-none transition-colors"
-                      placeholder="votre@email.com"
+                      placeholder={t("contact.emailPlaceholder")}
                       disabled={isLoading}
                     />
                   </div>
 
-                  {/* 👇 INPUT TÉLÉPHONE AMÉLIORÉ */}
                   <div>
                     <label className="font-mono text-sm text-muted-foreground block mb-2">
-                      <span className="text-primary">{">"}</span> Téléphone:
+                      <span className="text-primary">{">"}</span> {t("contact.phoneLabel")}
                     </label>
                     <input
                       type="tel"
                       name="user_phone"
                       value={formData.phone}
-                      onChange={handlePhoneChange} // Utilise la nouvelle fonction
-                      maxLength={14} // 10 chiffres + 4 espaces = 14 caractères
-                      inputMode="numeric" // Affiche le clavier numérique sur mobile
+                      onChange={handlePhoneChange}
+                      maxLength={14}
+                      inputMode="numeric"
                       className="w-full bg-muted border border-border rounded px-4 py-2 font-mono text-sm focus:border-primary focus:outline-none transition-colors"
-                      placeholder="06 92 XX XX XX"
+                      placeholder={t("contact.phonePlaceholder")}
                       disabled={isLoading}
                     />
                   </div>
 
                   <div>
                     <label className="font-mono text-sm text-muted-foreground block mb-2">
-                      <span className="text-primary">{">"}</span> Message:
+                      <span className="text-primary">{">"}</span> {t("contact.messageLabel")}
                     </label>
                     <textarea
                       name="message"
                       required
                       value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={6}
                       className="w-full bg-muted border border-border rounded px-4 py-2 font-mono text-sm focus:border-primary focus:outline-none transition-colors resize-none"
-                      placeholder="Votre message..."
+                      placeholder={t("contact.messagePlaceholder")}
                       disabled={isLoading}
                     />
                   </div>
@@ -201,12 +183,12 @@ const Contact = () => {
                     {isLoading ? (
                       <>
                         <Loader2 size={18} className="animate-spin" />
-                        <span>Transmission...</span>
+                        <span>{t("contact.sending")}</span>
                       </>
                     ) : (
                       <>
                         <Send size={18} />
-                        <span>Envoyer le message</span>
+                        <span>{t("contact.send")}</span>
                       </>
                     )}
                   </button>
@@ -217,7 +199,7 @@ const Contact = () => {
 
           <div className="mt-8 text-center">
             <p className="font-mono text-sm text-muted-foreground mb-4">
-              Ou contactez-moi directement :
+              {t("contact.directContact")}
             </p>
             <a
               href="mailto:r.leon@rt-iut.re"
