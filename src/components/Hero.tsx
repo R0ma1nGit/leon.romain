@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, Download, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, Eye, Linkedin, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import InteractiveCV from "./InteractiveCV";
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
   const [displayText, setDisplayText] = useState("");
+  const [cvOpen, setCvOpen] = useState(false);
   const fullText = t("hero.typing");
 
   useEffect(() => {
@@ -79,16 +81,15 @@ const Hero = () => {
                 <ChevronDown size={18} className="group-hover:translate-y-1 transition-transform" />
               </span>
             </button>
-            <a
-              href="/CV_Romain_LEON_Portfolio.pdf"
-              download="LEON_Romain-Curriculum_Vitae.pdf"
+            <button
+              onClick={() => setCvOpen(true)}
               className="px-8 py-3 bg-secondary text-secondary-foreground font-mono font-semibold rounded-lg hover:scale-105 transition-transform border-glow group"
             >
               <span className="flex items-center justify-center gap-2">
-                <Download size={18} className="group-hover:translate-y-1 transition-transform" />
-                {t("hero.downloadCV")}
+                <Eye size={18} className="group-hover:scale-110 transition-transform" />
+                {t("hero.viewCV")}
               </span>
-            </a>
+            </button>
           </div>
 
           {/* Social Links */}
@@ -112,6 +113,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <InteractiveCV open={cvOpen} onOpenChange={setCvOpen} />
     </section>
   );
 };

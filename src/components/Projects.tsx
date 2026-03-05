@@ -1,6 +1,6 @@
 import { Network, Server, Globe, ArrowRight, Activity, Shield, Cloud, Layers, HardDrive, Lock, FileText, AlertTriangle, Loader2, X, CheckCircle2, ClipboardCheck, Monitor, Wifi, Workflow, Database, Users, Book,} from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -58,6 +58,21 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory | "tous">("tous");
   const [pdfOpen, setPdfOpen] = useState(false);
 
+  // Listen for open-project events from InteractiveCV
+  useEffect(() => {
+    const handleOpenProject = (e: Event) => {
+      const customEvent = e as CustomEvent<{ index: number }>;
+      const idx = customEvent.detail.index;
+      setTimeout(() => {
+        if (projects[idx]) {
+          setSelectedProject(projects[idx]);
+        }
+      }, 100);
+    };
+    window.addEventListener("open-project", handleOpenProject);
+    return () => window.removeEventListener("open-project", handleOpenProject);
+  });
+  
   // Fonction de journalisation simulée
   const logPdfAccess = (projectTitle: string) => {
     const timestamp = new Date().toISOString();
