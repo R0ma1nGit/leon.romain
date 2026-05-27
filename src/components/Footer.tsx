@@ -35,14 +35,6 @@ const Footer = () => {
             >
               <Mail size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
-            <button
-              onClick={() => navigate("/cv-builder")}
-              className="p-2 bg-muted hover:bg-primary/10 rounded-lg transition-colors group"
-              aria-label="Générateur de CV"
-              title="Générateur de CV"
-            >
-              <FileText size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
-            </button>
           </div>
         </div>
 
