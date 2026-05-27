@@ -1,9 +1,11 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <footer className="bg-card border-t border-border py-8">
@@ -27,13 +29,20 @@ const Footer = () => {
               <Linkedin size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:r.leon@rt-iut.re"
               className="p-2 bg-muted hover:bg-primary/10 rounded-lg transition-colors group"
               aria-label="Email"
             >
               <Mail size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
-
+            <button
+              onClick={() => navigate("/cv-builder")}
+              className="p-2 bg-muted hover:bg-primary/10 rounded-lg transition-colors group"
+              aria-label="Générateur de CV"
+              title="Générateur de CV"
+            >
+              <FileText size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
+            </button>
           </div>
         </div>
 
