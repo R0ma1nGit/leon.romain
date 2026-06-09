@@ -90,13 +90,8 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
               </h2>
               <p className="text-muted-foreground font-mono text-sm mt-2">
                 {isFr
-                  ? "Étudiant en 3ème année de BUT Réseaux & Télécommunications"
-                  : "3rd Year Networking & Telecommunications Student"}
-              </p>
-              <p className="text-xs text-muted-foreground font-mono mt-1">
-                {isFr
-                  ? "Spécialisation Réseau Opérateur et Multimédia"
-                  : "Network Operator & Multimedia Specialization"}
+                  ? "Étudiant en BUT Réseaux & Télécommunications | Admis en cursus Expert DevOps à l'EPSI Grenoble"
+                  : "Student in Networking & Telecommunications | Admitted to Expert DevOps program at EPSI Grenoble"}
               </p>
 
               <div className="flex flex-wrap gap-3 mt-4 text-xs text-muted-foreground font-mono">
@@ -114,8 +109,8 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
 
             <div className="flex flex-col gap-2">
               <a
-                href="/CV_Romain_LEON_Portfolio.pdf"
-                download="LEON_Romain-Curriculum_Vitae.pdf"
+                href="/LEON_Romain-Curriculum_vitae_2.pdf"
+                download="LEON_Romain-Curriculum_vitae_2.pdf"
                 className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-xs font-mono text-primary hover:bg-primary/20 transition-all"
               >
                 <Download size={14} /> {isFr ? "Télécharger PDF" : "Download PDF"}
@@ -144,8 +139,8 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center">
             <p className="font-mono text-sm font-semibold text-primary">
               {isFr
-                ? "Intégrer une école d'ingénieur ou un Master admin systèmes & réseaux"
-                : "Join an engineering school or Master's in system & network administration"}
+                ? "À la recherche d'une alternance DevOps / Admin Sys & Réseaux"
+                : "Looking for a work-study program in DevOps / Sys & Network Admin"}
             </p>
           </div>
 
@@ -161,8 +156,8 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
           >
             <p className="text-sm text-muted-foreground leading-relaxed">
               {isFr
-                ? "Bientôt diplômé d'un BUT Réseaux & Télécommunications, je m'intéresse particulièrement à l'administration systèmes et aux infrastructures réseau. À travers mes projets universitaires, j'ai développé des compétences en Linux, Windows Server, supervision et virtualisation. Je souhaite poursuivre mes études afin de me spécialiser en administration systèmes et infrastructures."
-                : "Soon graduating with a Bachelor's in Networking & Telecommunications, I'm particularly interested in systems administration and network infrastructure. Through my university projects, I've developed skills in Linux, Windows Server, monitoring and virtualization. I aim to join an engineering school or pursue a Master's in system & network administration."}
+                ? "Bientôt Diplômé en BUT Réseaux et Télécommunications, admis en cursus Expert DevOps à l'EPSI Grenoble. Je recherche une alternance de deux ans afin de développer mes compétences en administration réseaux et systèmes, infrastructures et automatisation."
+                : "Soon graduating with a Bachelor's in Networking & Telecommunications, admitted to the Expert DevOps program at EPSI Grenoble. I am looking for a two-year work-study program to develop my skills in network and system administration, infrastructure and automation."}
             </p>
           </CVSection>
 
@@ -276,11 +271,11 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
               />
               <SkillBlock
                 title={isFr ? "Systèmes & Scripting" : "Systems & Scripting"}
-                skills={["Linux (Debian)", "Windows Server", "Active Directory", "Bash / Python"]}
+                skills={["Linux (Debian)", "Windows Server", "Active Directory", "Bash / Python / Git"]}
               />
               <SkillBlock
                 title={isFr ? "Supervision & IoT" : "Monitoring & IoT"}
-                skills={["Grafana / InfluxDB", "Docker", "Wireshark / Cacti"]}
+                skills={["Grafana / InfluxDB", "Zabbix", "Graylog", "Docker", "Wireshark / Cacti"]}
               />
               <SkillBlock
                 title={isFr ? "Méthodologies projets" : "Project Methodology"}
@@ -363,10 +358,10 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
             >
               <div className="flex flex-wrap gap-2">
                 {[
-                  isFr ? "Autonome" : "Self-reliant",
-                  isFr ? "Rigoureux" : "Rigorous",
+                  isFr ? "Rigueur" : "Rigor",
+                  isFr ? "Curiosité technique" : "Technical curiosity",
                   isFr ? "Esprit d'équipe" : "Team player",
-                  isFr ? "Curieux" : "Curious",
+                  isFr ? "Autonomie" : "Autonomy",
                 ].map((s) => (
                   <Badge key={s} variant="outline" className="border-secondary/40 text-secondary bg-secondary/5 font-mono text-xs">
                     {s}

@@ -1,6 +1,7 @@
 # Portfolio - Romain LEON
 
 Portfolio web interactif avec thème cyber/réseau, présentant mon parcours, mes projets techniques et mes compétences en administration réseaux & systèmes.
+Actuellement à la recherche d'une alternance DevOps / Admin Sys & Réseaux.
 
 ## Stack technique
 
@@ -18,10 +19,10 @@ Portfolio web interactif avec thème cyber/réseau, présentant mon parcours, me
 
 - **Design responsive** avec thème clair/sombre
 - **Internationalisation** : français et anglais
-- **CV interactif** avec navigation vers les sections du portfolio
+- **CV interactif** avec navigation vers les sections du portfolio (téléchargement PDF : `LEON_Romain-Curriculum_vitae_2.pdf`)
 - **Section projets** : comptes rendus détaillés avec topologies, technologies et résultats
 - **Timeline d'expériences** avec missions et compétences développées
-- **Section compétences** catégorisées (Réseaux, Supervision, Systèmes, Virtualisation...)
+- **Section compétences** catégorisées (Réseaux, Supervision, Systèmes, Virtualisation, Services, Outils)
 - **Certifications** avec scores par module
 - **Formulaire de contact** intégré via EmailJS
 

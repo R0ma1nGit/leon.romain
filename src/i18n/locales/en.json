@@ -11,7 +11,7 @@
   },
   "hero": {
     "typing": "I build, configure and secure networks.",
-    "role": "Networking & Telecommunications Student | Network Specialization",
+    "role": "Admitted to EPSI Grenoble | Looking for a work-study program in Network & Systems Administration",
     "learnMore": "Learn more",
     "downloadCV": "Download my resume",
     "viewCV": "View my resume"
@@ -26,8 +26,8 @@
     "pursuitSchools": "(ENSMAG / Polytech / INSA)",
     "terminalFile": "about.txt",
     "terminalCmd": "cat about.txt",
-    "aboutText1": "Passionate about computer networking, I am particularly interested in designing and configuring complex network infrastructures (MPLS, OSPF, EIGRP), as well as monitoring and maintaining IT infrastructures.",
-    "aboutText2": "I am also developing system administration skills through projects and hands-on practice. I am actively seeking opportunities to deepen my network and system administration skills in a stimulating technical environment.",
+    "aboutText1": "Passionate about IT infrastructures, network monitoring and hardware, my goal is to become a Network and Systems Administrator, with a comprehensive approach to the profession, combining physical hardware management with the deployment of virtual and secure architectures.",
+    "aboutText2": "I also develop my systems skills through concrete projects. I am actively looking for a work-study opportunity to deepen this knowledge in a stimulating technical environment.",
     "education": "Education",
     "edu1Date": "2025 - 2026",
     "edu1Title": "Bachelor's in Networking & Telecommunications",
@@ -84,7 +84,7 @@
       },
       {
         "title": "Monitoring",
-        "skills": ["Cacti", "Monitoring", "SNMP", "Incident Management", "Grafana"]
+        "skills": ["Cacti", "Grafana", "Zabbix", "Graylog", "InfluxDB"]
       },
       {
         "title": "Services",
@@ -92,15 +92,15 @@
       },
       {
         "title": "Systems",
-        "skills": ["Linux", "Windows Server", "System Administration", "Virtualization"]
+        "skills": ["Linux", "Windows Server", "System Administration", "Scripting & Automation"]
       },
       {
         "title": "Virtualization",
-        "skills": ["VMware", "VirtualBox", "Docker", "Virtual Environments"]
+        "skills": ["Docker", "VMware", "VirtualBox"]
       },
       {
-        "title": "Tools",
-        "skills": ["Cisco IOS", "Wireshark", "Packet Tracer", "Bash Scripts"]
+        "title": "Scripting & Tools",
+        "skills": ["Cisco IOS", "Wireshark", "Packet Tracer", "Bash Scripts", "Git"]
       }
     ]
   },

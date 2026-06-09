@@ -11,7 +11,7 @@
   },
   "hero": {
     "typing": "Je construis, configure et sécurise des réseaux.",
-    "role": "Étudiant en BUT Réseaux & Télécommunications | Spécialisation Réseau",
+    "role": "Admis à l'EPSI Grenoble | En recherche d'une alternance en Administration Réseaux & Systèmes",
     "learnMore": "En savoir plus",
     "downloadCV": "Télécharger mon CV",
     "viewCV": "Voir mon CV"
@@ -26,8 +26,8 @@
     "pursuitSchools": "",
     "terminalFile": "about.txt",
     "terminalCmd": "cat about.txt",
-    "aboutText1": "Passionné par l'univers des réseaux informatiques, je m'intéresse particulièrement à la conception et à la configuration d'infrastructures réseau complexes (MPLS, OSPF, EIGRP), ainsi qu'à la supervision et au bon fonctionnement des infrastructures IT.",
-    "aboutText2": "Je développe également des compétences en systèmes, à travers des projets et des mises en pratique. Je recherche activement des opportunités pour approfondir mes compétences en administration réseau et système, dans un environnement technique stimulant.",
+    "aboutText1": "Passionné par les infrastructures IT, la supervision réseau et le hardware, mon objectif est de devenir Administrateur Réseaux et Systèmes, avec une approche complète du métier, alliant la gestion du matériel physique au déploiement d'architectures virtuelles et sécurisées.",
+    "aboutText2": "Je développe également mes compétences en systèmes à travers des projets concrets. Je recherche activement une opportunité en alternance pour approfondir ces connaissances dans un environnement technique stimulant.",
     "education": "Formation",
     "edu1Date": "2025 - 2026",
     "edu1Title": "BUT Réseaux & Télécommunications",
@@ -84,7 +84,7 @@
       },
       {
         "title": "Supervision",
-        "skills": ["Cacti", "Monitoring", "SNMP", "Gestion d'incidents", "Grafana"]
+        "skills": ["Cacti", "Grafana", "Zabbix", "Graylog", "InfluxDB"]
       },
       {
         "title": "Services",
@@ -92,15 +92,15 @@
       },
       {
         "title": "Systèmes",
-        "skills": ["Linux", "Windows Server", "Administration Système", "Virtualisation"]
+        "skills": ["Linux", "Windows Server", "Administration Système", "Scripting & Automatisation"]
       },
       {
         "title": "Virtualisation",
-        "skills": ["VMware", "VirtualBox", "Docker", "Environnements virtuels"]
+        "skills": ["Docker", "VMware", "VirtualBox"]
       },
       {
-        "title": "Outils",
-        "skills": ["Cisco IOS", "Wireshark", "Packet Tracer", "Scripts Bash"]
+        "title": "Scripting & Outils",
+        "skills": ["Cisco IOS", "Wireshark", "Packet Tracer", "Scripts Bash", "Git"]
       }
     ]
   },

@@ -7,7 +7,7 @@ function getDefaultCVData(): CVData {
   return {
     firstName: "ROMAIN",
     lastName: "LÉON",
-    subtitle: "Étudiant en 3ème année de BUT Réseaux & Télécommunications | Spécialisation Réseau Opérateur et Multimédia",
+    subtitle: "Étudiant en BUT Réseaux & Télécommunications | Admis en cursus Expert DevOps à l'EPSI Grenoble",
     address: "Basse Terre, Saint-Pierre 97410",
     email: "r.leon@rt-iut.re",
     phone: "06 93 39 78 68",
