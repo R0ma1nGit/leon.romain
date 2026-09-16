@@ -1,4 +1,4 @@
-import { Network, Server, Globe, ArrowRight, Activity, Shield, Cloud, Layers, HardDrive, Lock, FileText, AlertTriangle, Loader2, X, CheckCircle2, ClipboardCheck, Monitor, Wifi, Workflow, Database, Users, Book,} from "lucide-react";
+import { Network, Server, Globe, ArrowRight, Activity, Shield, Cloud, Layers, HardDrive, Lock, FileText, AlertTriangle, Loader2, X, CheckCircle2, ClipboardCheck, Monitor, Wifi, Workflow, Database, Users, Book, Anchor,} from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState, useEffect, useCallback } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +17,7 @@ import topologyMQTT from "@/assets/MQTT.png";
 import topologyMPLS from "@/assets/MPLS.png";
 // import topologyFEEZEN from "@/assets/topology-feezen.png";
 type ProjectYear = "BUT1" | "BUT2" | "BUT3";
-type ProjectCategory = "réseau" | "supervision" | "serveur" |"projet personnel";
+type ProjectCategory = "réseau" | "supervision" | "serveur" | "projet personnel" | "développement";
 
 interface Project {
   title: string;
@@ -118,6 +118,7 @@ const Projects = () => {
     { icon: Database, color: "primary", category: "serveur" as ProjectCategory, rapport: "/Rapport_MySQL.pdf", status: "termine" as const, annee: "BUT2" as ProjectYear },
     { icon: Globe, color: "primary", category: "projet personnel" as ProjectCategory, status: "termine" as const },
     { icon: Users, color: "secondary", category: "serveur" as ProjectCategory, topology: topologyAD, rapport: "/Rapport_Active_Directory.pdf", status: "termine" as const, annee: "BUT2" as ProjectYear },
+    { icon: Anchor, color: "secondary", category: "développement" as ProjectCategory, rapport: "/Rapport_Bataille_Navale.pdf", status: "termine" as const, annee: "BUT2" as ProjectYear },
   ];
 
   const projects: Project[] = projectsList.map((p, i) => ({
@@ -144,6 +145,7 @@ const Projects = () => {
     { name: "réseau", label: t("projects.network"), color: "text-cyan-400" },
     { name: "supervision", label: t("projects.supervision"), color: "text-green-400" },
     { name: "serveur", label: t("projects.server"), color: "text-blue-400" },
+    { name: "développement", label: t("projects.development"), color: "text-purple-400" },
     { name: "projet personnel", label: t("projects.personalProject"), color: "text-yellow-400" }
   ];
 

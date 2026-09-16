@@ -111,6 +111,7 @@
     "supervision": "Supervision",
     "server": "Serveur",
     "personalProject": "Projet Personnel",
+    "development": "Développement",
     "clickDetails": "Cliquez pour voir les détails",
     "context": "Contexte",
     "objective": "Objectif",
@@ -277,6 +278,22 @@
         ],
         "resultats": "Domaine opérationnel avec une base d'utilisateurs structurée. Les postes clients peuvent s'authentifier sur le réseau via le Contrôleur de Domaine.",
         "technologies": ["Windows Server 2016", "AD DS", "DNS", "VirtualBox", "Clonage VM"]
+      },
+      {
+        "title": "Application Web Multijoueur & Communication Temps Réel",
+        "description": "Jeu multijoueur de bataille navale en temps réel : communication client/serveur avec Socket.io (Node.js).",
+        "skills": ["Node.js", "JavaScript", "Socket.io", "PHP/SQL", "MySQL/MariaDB", "Debian"],
+        "contexte": "Le projet visait à concevoir une application communicante avec gestion des requêtes, affichage dynamique des données et interaction avec le réseau/serveur. Il a débouché sur un jeu de bataille navale multijoueur : l'utilisateur place ses bateaux et tente de toucher ceux de l'adversaire dans un navigateur, avec une communication en temps réel via Socket.io.",
+        "objectif": "Développer un jeu web multijoueur fonctionnel, capable d'utiliser les WebSockets pour la communication en temps réel et de respecter un cahier des charges technique précis : gestion des tours, conditions de victoire et gestion des déconnexions côté serveur.",
+        "realisation": [
+          "Phase 1 — Recherche et inspiration : analyse de projets de bataille navale existants sur le web et adaptation du code aux besoins spécifiques, avec un design optimisé pour l'expérience utilisateur.",
+          "Phase 2 — Développement et optimisation : conversion du code initial vers Node.js pour la partie serveur, mise en place du projet sur serveur Debian (PHP et MySQL/MariaDB) et configuration initiale.",
+          "Phase 3 — Intégration du multijoueur : mise en place de Socket.io pour communiquer en temps réel (émission d'événements à chaque action) et modèle de données centralisé côté serveur pour diffuser les mises à jour.",
+          "Fiabilité : gestion autonome des tours et des conditions de victoire côté serveur, identification des joueurs par sessions/tokens et mécanismes de gestion des déconnexions.",
+          "Tests, débogage et optimisation des interactions multijoueur pour garantir la stabilité et la fluidité de la partie."
+        ],
+        "resultats": "Application de bataille navale multijoueur opérationnelle : communication bidirectionnelle en temps réel (Socket.io), interface réactive avec placement intuitif des navires et retour visuel immédiat, et synchronisation cohérente de l'état de la partie entre les clients.",
+        "technologies": ["Node.js", "JavaScript", "Socket.io", "PHP", "MySQL/MariaDB", "Debian", "VirtualBox"]
       }
     ]
   },

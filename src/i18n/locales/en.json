@@ -111,6 +111,7 @@
     "supervision": "Monitoring",
     "server": "Server",
     "personalProject": "Personal Project",
+    "development": "Development",
     "clickDetails": "Click to view details",
     "context": "Context",
     "objective": "Objective",
@@ -277,6 +278,22 @@
         ],
         "resultats": "Operational domain with a structured user base. Client workstations can authenticate on the network via the Domain Controller.",
         "technologies": ["Windows Server 2016", "AD DS", "DNS", "VirtualBox", "VM Cloning"]
+      },
+      {
+        "title": "Multiplayer Web Application & Real-Time Communication",
+        "description": "Real-time multiplayer battleship game: client/server communication with Socket.io (Node.js).",
+        "skills": ["Node.js", "JavaScript", "Socket.io", "PHP/SQL", "MySQL/MariaDB", "Debian"],
+        "contexte": "The project aimed to design a communicating application with query management, dynamic data display and network/server interaction. It resulted in a multiplayer battleship game: the user places their ships and tries to hit the opponent's in a browser, with real-time communication via Socket.io.",
+        "objectif": "Develop a functional multiplayer web game, capable of using WebSockets for real-time communication and meeting a precise technical specification: turn management, win conditions and disconnect handling on the server side.",
+        "realisation": [
+          "Phase 1 — Research & inspiration: analysis of existing battleship projects on the web and adaptation of the code to specific needs, with a design optimized for user experience.",
+          "Phase 2 — Development & optimization: conversion of the initial code to Node.js for the server side, deployment on a Debian server (PHP and MySQL/MariaDB) and initial configuration.",
+          "Phase 3 — Multiplayer integration: implementation of Socket.io for real-time communication (event emission on each action) with a centralized data model on the server to broadcast updates.",
+          "Reliability: autonomous management of turns and win conditions server-side, player identification via sessions/tokens and disconnect handling mechanisms.",
+          "Testing, debugging and optimization of multiplayer interactions to ensure game stability and fluidity."
+        ],
+        "resultats": "Operational multiplayer battleship application: real-time bidirectional communication (Socket.io), responsive interface with intuitive ship placement and immediate visual feedback, and consistent synchronization of the game state between clients.",
+        "technologies": ["Node.js", "JavaScript", "Socket.io", "PHP", "MySQL/MariaDB", "Debian", "VirtualBox"]
       }
     ]
   },
