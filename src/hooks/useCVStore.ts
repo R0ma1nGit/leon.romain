@@ -12,11 +12,11 @@ function getDefaultCVData(): CVData {
     email: "r.leon@rt-iut.re",
     phone: "06 93 39 78 68",
     drivingLicense: "Permis B + Véhicule",
-    objective: "Me spécialiser en administration systèmes et infrastructures réseau",
-    profile: "Bientôt diplômé d'un BUT Réseaux & Télécommunications, je m'intéresse particulièrement à l'administration systèmes et aux infrastructures réseau. À travers mes projets universitaires, j'ai développé des compétences en Linux, Windows Server, supervision et virtualisation. Je souhaite poursuivre mes études afin de me spécialiser en administration systèmes et infrastructures.",
+    objective: "Me spécialiser en DevOps : automatisation, déploiement continu et administration d'infrastructures",
+    profile: "Bientôt diplômé d'un BUT Réseaux & Télécommunications et admis en cursus Expert DevOps à l'EPSI Grenoble, je me spécialise dans l'automatisation des infrastructures. À travers mes projets et stages, j'ai développé des compétences en Linux, virtualisation, supervision (Grafana, Zabbix), automatisation (Ansible) et conteneurisation (Docker). Je souhaite mettre ces compétences au service d'une équipe DevOps en alternance.",
     education: [
-      { date: "2025 - 2026 (En cours)", title: "BUT Réseau & Télécommunication", school: "IUT de Saint-Pierre" },
-      { date: "2023 - 2025", title: "DUT Réseau & Télécommunication", school: "IUT de Saint-Pierre" },
+      { date: "2026 (En cours)", title: "Expert DevOps — Bac+4 / Bac+5 (Équivalent Master RNCP Niveau 7)", school: "EPSI École d'ingénierie informatique — Grenoble" },
+      { date: "2023 - 2026", title: "BUT Réseaux & Télécommunications", school: "IUT de Saint-Pierre" },
       { date: "2023", title: "Baccalauréat STI2D", school: "Lycée Paule Pignolet" },
     ],
     skillCategories: [
@@ -28,7 +28,7 @@ function getDefaultCVData(): CVData {
       {
         title: "Systèmes & Scripting",
         icon: "terminal",
-        skills: ["Linux (Debian)", "Windows Server", "Active Directory", "Bash / Python"],
+        skills: ["Linux (Debian)", "Windows Server", "Active Directory", "Bash / Python / Ansible"],
       },
       {
         title: "Supervision & IoT",
@@ -71,10 +71,10 @@ function getDefaultCVData(): CVData {
     ],
     projects: [
       {
-        title: "Chaîne IoT & Supervision de bout en bout",
-        subtitle: "Température/humidité (MQTT, InfluxDB, Grafana)",
-        results: "Recettes de test : Alerte de dépassement / Supervision",
-        stack: "Docker • Python • MQTT • Grafana • InfluxDB",
+        title: "Automatisation de Parc Serveurs (Ansible)",
+        subtitle: "Pilotage automatique d'une flotte de serveurs Linux (configuration, installation, mises à jour)",
+        results: "Configuration & mises à jour centralisées en une seule commande (Playbooks)",
+        stack: "Ansible • Linux Debian • SSH • YAML • Bash",
       },
       {
         title: "Architecture MPLS & Virtualisation",

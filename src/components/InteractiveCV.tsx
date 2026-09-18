@@ -173,19 +173,19 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
           >
             <div className="space-y-3">
               <EducationItem
-                year={isFr ? "2025 - 2026 (En cours)" : "2025 - 2026 (Ongoing)"}
-                title={isFr ? "BUT Réseau & Télécommunication" : "Bachelor's in Networking & Telecom"}
-                school="IUT de Saint-Pierre"
+                year={isFr ? "2026 (En cours)" : "2026 (Ongoing)"}
+                title={isFr ? "Expert DevOps — Bac+4 / Bac+5 (Équivalent Master)" : "Expert DevOps — Bac+4 / Bac+5 (Master's equivalent)"}
+                school={isFr ? "EPSI École d'ingénierie informatique — Grenoble · RNCP Niveau 7" : "EPSI School of IT Engineering — Grenoble · RNCP Level 7"}
               />
               <EducationItem
-                year="2025"
-                title={isFr ? "DUT Réseau & Télécommunication" : "Associate Degree in Networking & Telecom"}
+                year={isFr ? "2023 - 2026" : "2023 - 2026"}
+                title={isFr ? "BUT Réseaux & Télécommunications" : "Bachelor's in Networking & Telecom"}
                 school="IUT de Saint-Pierre"
               />
               <EducationItem
                 year="2023"
                 title={isFr ? "Baccalauréat STI2D" : "Baccalauréat STI2D"}
-                school="Lycée Paule Pignolet"
+                school={isFr ? "Lycée Paule Pignolet" : "Lycée Paule Pignolet"}
               />
             </div>
           </CVSection>
@@ -271,7 +271,7 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
               />
               <SkillBlock
                 title={isFr ? "Systèmes & Scripting" : "Systems & Scripting"}
-                skills={["Linux (Debian)", "Windows Server", "Active Directory", "Bash / Python / Git"]}
+                skills={["Linux (Debian)", "Windows Server", "Active Directory", "Bash / Python / Git / Ansible"]}
               />
               <SkillBlock
                 title={isFr ? "Supervision & IoT" : "Monitoring & IoT"}
@@ -296,17 +296,17 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
             onMouseLeave={() => setHoveredSection(null)}
           >
             <div className="space-y-4">
-              {/* IoT Project */}
+              {/* Ansible Project */}
               <ProjectCard
-                title={isFr ? "Chaîne IoT & Supervision de bout en bout" : "End-to-End IoT & Monitoring Chain"}
+                title={isFr ? "Automatisation de Parc Serveurs (Ansible)" : "Server Fleet Automation (Ansible)"}
                 description={
                   isFr
-                    ? "Température/humidité (MQTT, InfluxDB, Grafana). Recettes de test : Alerte de dépassement."
-                    : "Temperature/humidity (MQTT, InfluxDB, Grafana). Test recipes: Threshold alerts."
+                    ? "Pilotage automatique d'une flotte de serveurs Linux (configuration, installation, mises à jour)."
+                    : "Automated management of a Linux server fleet (configuration, installation, updates)."
                 }
-                stack={["Docker", "Python", "MQTT", "Grafana", "InfluxDB"]}
-                category={isFr ? "Supervision" : "Monitoring"}
-                onClick={() => openProject(2)}
+                stack={["Ansible", "Linux Debian", "SSH", "YAML", "Bash"]}
+                category={isFr ? "Serveur" : "Server"}
+                onClick={() => openProject(3)}
               />
 
               {/* MPLS Project */}
@@ -342,7 +342,7 @@ const InteractiveCV = ({ open, onOpenChange }: InteractiveCVProps) => {
               className="mt-4 flex items-center gap-2 text-primary font-mono text-sm hover:underline group"
             >
               <FolderOpen size={14} />
-              {isFr ? "Voir tous mes projets (9)" : "View all my projects (9)"}
+              {isFr ? "Voir tous mes projets (10)" : "View all my projects (10)"}
               <ExternalLink size={12} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </CVSection>

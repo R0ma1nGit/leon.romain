@@ -7,6 +7,7 @@ import {
   ChevronDown,
   FileText,
   ExternalLink,
+  Rocket,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -21,6 +22,7 @@ interface Job {
   tasks: string[];
   skillsList: string[];
   report: string | null;
+  looking?: boolean;
 }
 
 const Experience = () => {
@@ -66,11 +68,13 @@ const Experience = () => {
                 {/* Dot on the line */}
                 <div
                   className={`absolute left-5 md:left-1/2 top-8 -translate-x-1/2 z-10 w-4 h-4 rounded-full border-2 transition-all duration-300 ${
-                    job.current
-                      ? "bg-primary border-primary shadow-[0_0_12px_hsl(var(--primary)/0.6)] animate-pulse"
-                      : isExpanded
-                        ? "bg-secondary border-secondary"
-                        : "bg-muted border-border group-hover:border-primary group-hover:bg-primary/20"
+                    job.looking
+                      ? "bg-secondary border-secondary shadow-[0_0_12px_hsl(var(--secondary)/0.7)] animate-pulse"
+                      : job.current
+                        ? "bg-primary border-primary shadow-[0_0_12px_hsl(var(--primary)/0.6)] animate-pulse"
+                        : isExpanded
+                          ? "bg-secondary border-secondary"
+                          : "bg-muted border-border group-hover:border-primary group-hover:bg-primary/20"
                   }`}
                 />
 
@@ -94,26 +98,40 @@ const Experience = () => {
                         <div className="flex items-start gap-3 flex-1 min-w-0">
                           <div
                             className={`p-2.5 rounded-lg border shrink-0 transition-colors duration-300 ${
-                              job.current
-                                ? "bg-primary/10 border-primary/30"
-                                : "bg-muted border-border group-hover:border-primary/20"
+                              job.looking
+                                ? "bg-secondary/10 border-secondary/30"
+                                : job.current
+                                  ? "bg-primary/10 border-primary/30"
+                                  : "bg-muted border-border group-hover:border-primary/20"
                             }`}
                           >
-                            <Briefcase
-                              size={20}
-                              className={
-                                job.current
-                                  ? "text-primary"
-                                  : "text-muted-foreground group-hover:text-primary transition-colors"
-                              }
-                            />
+                            {job.looking ? (
+                              <Rocket
+                                size={20}
+                                className="text-secondary"
+                              />
+                            ) : (
+                              <Briefcase
+                                size={20}
+                                className={
+                                  job.current
+                                    ? "text-primary"
+                                    : "text-muted-foreground group-hover:text-primary transition-colors"
+                                }
+                              />
+                            )}
                           </div>
                           <div className="min-w-0">
                             <div className="flex items-center gap-2 flex-wrap mb-1">
                               <h3 className="font-mono text-base font-semibold leading-tight">
                                 {job.jobTitle}
                               </h3>
-                              {job.current && (
+                              {job.looking && (
+                                <Badge className="bg-secondary/15 text-secondary border-secondary/40 font-mono text-[10px] px-2 py-0.5 animate-pulse">
+                                  2 ANS
+                                </Badge>
+                              )}
+                              {job.current && !job.looking && (
                                 <Badge className="bg-primary/15 text-primary border-primary/30 font-mono text-[10px] px-2 py-0.5 animate-pulse">
                                   {t("experience.current")}
                                 </Badge>
